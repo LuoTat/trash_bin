@@ -9,7 +9,6 @@
             "hash": "e70735777bdeb23d438b25727f23415b9e1be2896f751f6aa7737a907f29fff7"
         }
     },
-    "bin": "DLsiteNest.exe",
     "pre_install": [
         "Expand-7zipArchive \"$dir\\dlsitenest-v$version-win32-x64.exe\" \"$dir\"",
         "Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse"
