@@ -1,0 +1,50 @@
+{
+    "version": "2.0.8",
+    "description": "Store (DLsite), viewer (DLsite Play), and community (DL Channel). Access them all without having to jump between services.",
+    "homepage": "https://www.dlsite.com/home/guide/dlnest?locale=en_US",
+    "license": "Proprietary",
+    "architecture": {
+        "64bit": {
+            "url": "https://www.dlsite.com/modpub/nest/releases/dlsitenest-v2.0.8-win32-x64.exe",
+            "hash": "e70735777bdeb23d438b25727f23415b9e1be2896f751f6aa7737a907f29fff7"
+        }
+    },
+    "bin": "DLsiteNest.exe",
+    "pre_install": [
+        "Expand-7zipArchive \"$dir\\dlsitenest-v$version-win32-x64.exe\" \"$dir\"",
+        "Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse"
+    ],
+    "shortcuts": [
+        [
+            "DLsiteNest.exe",
+            "DLsiteNest"
+        ]
+    ],
+    "persist": [
+        "Library",
+        "DownloadCache"
+    ],
+    "checkver": {
+        "script": [
+            "$response = Invoke-WebRequest -Uri \"https://dlsite.jp/NEST\" -Method Head -ErrorAction Stop",
+            "if ($response.StatusCode -eq 200) {",
+            "    $redirectUrl = $response.BaseResponse.ResponseUri.AbsoluteUri",
+            "    if ($redirectUrl -match 'dlsitenest-v([\\d.]+)-win32-x64.exe') {",
+            "        $Matches[1]",
+            "    } else {",
+            "        Write-Error \"Failed to extract version number from redirect URL.\"",
+            "    }",
+            "} else {",
+            "    Write-Error \"Request failed with status code $($response.StatusCode)\"",
+            "}"
+        ],
+        "regex": "(\\S+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://www.dlsite.com/modpub/nest/releases/dlsitenest-v$version-win32-x64.exe"
+            }
+        }
+    }
+}
