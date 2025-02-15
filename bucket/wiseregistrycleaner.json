@@ -2,7 +2,7 @@
     "version": "11.1.9.724",
     "description": "Free Registry Cleaner and Optimizer.",
     "homepage": "https://www.wisecleaner.com",
-    "license": "https://www.wisecleaner.com",
+    "license": "Proprietary",
     "architecture": {
         "64bit": {
             "url": "https://downloads.wisecleaner.com/soft/WRCFree_11.1.9.724.zip",
