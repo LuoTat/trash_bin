@@ -2,7 +2,7 @@
     "version": "11.2.0.837",
     "description": "Free Disk Cleanup and Defragment Tool.",
     "homepage": "https://www.wisecleaner.com",
-    "license": "https://www.wisecleaner.com",
+    "license": "Proprietary",
     "architecture": {
         "64bit": {
             "url": "https://downloads.wisecleaner.com/soft/WDCFree_11.2.0.837.zip",
