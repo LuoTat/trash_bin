@@ -26,15 +26,14 @@
     ],
     "persist": "AppConfig.json",
     "checkver": {
-        "url": "https://api.github.com/repos/wmjordan/PDFPatcher/releases/latest",
-        "jsonpath": "$.assets[0].browser_download_url",
-        "regex": "download/v([\\d.]+)(-\\w+)?/PDFPatcher.([\\d.]+)(\\d+)\\.7z",
-        "replace": "${3}${4}"
+        "url": "https://api.github.com/repositories/441460974/releases",
+        "regex": "download/v([\\d.]+)/PDFPatcher.([\\d.]+)(\\d+)\\.7z",
+        "replace": "${2}${3}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/wmjordan/PDFPatcher/releases/download/v$match1$match2/PDFPatcher.$match3$match4.7z"
+                "url": "https://github.com/wmjordan/PDFPatcher/releases/download/v$match1/PDFPatcher.$match2$match3.7z"
             }
         }
     }
