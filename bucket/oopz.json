@@ -22,19 +22,10 @@
     ],
     "checkver": {
         "script": [
-            "$response = Invoke-WebRequest -Uri \"https://www.oopz.cn/download/xx\" -Method Head -ErrorAction Stop",
-            "if ($response.StatusCode -eq 200) {",
-            "    $redirectUrl = $response.BaseResponse.ResponseUri.AbsoluteUri",
-            "    if ($redirectUrl -match 'oopz_setup_v([\\d.]+).exe') {",
-            "        $Matches[1]",
-            "    } else {",
-            "        Write-Error \"Failed to extract version number from redirect URL.\"",
-            "    }",
-            "} else {",
-            "    Write-Error \"Request failed with status code $($response.StatusCode)\"",
-            "}"
+            ". bin\\utils.ps1",
+            "Get-RedirectedVersion -url \"https://www.oopz.cn/download/xx\" -regexPattern \"oopz_setup_v([\\d.]+).exe\""
         ],
-        "regex": "(\\S+)"
+        "regex": "([\\d.]+)"
     },
     "autoupdate": {
         "architecture": {
