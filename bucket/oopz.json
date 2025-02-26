@@ -22,7 +22,7 @@
     ],
     "checkver": {
         "script": [
-            "$response = Invoke-WebRequest -Uri \"https://www.oopz.cn/download/xx?v=1740543552\" -Method Head -ErrorAction Stop",
+            "$response = Invoke-WebRequest -Uri \"https://www.oopz.cn/download/xx\" -Method Head -ErrorAction Stop",
             "if ($response.StatusCode -eq 200) {",
             "    $redirectUrl = $response.BaseResponse.ResponseUri.AbsoluteUri",
             "    if ($redirectUrl -match 'oopz_setup_v([\\d.]+).exe') {",
