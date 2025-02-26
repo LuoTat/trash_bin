@@ -24,20 +24,11 @@
         "DownloadCache"
     ],
     "checkver": {
-        "script": [
-            "$response = Invoke-WebRequest -Uri \"https://dlsite.jp/NEST\" -Method Head -ErrorAction Stop",
-            "if ($response.StatusCode -eq 200) {",
-            "    $redirectUrl = $response.BaseResponse.ResponseUri.AbsoluteUri",
-            "    if ($redirectUrl -match 'dlsitenest-v([\\d.]+)-win32-x64.exe') {",
-            "        $Matches[1]",
-            "    } else {",
-            "        Write-Error \"Failed to extract version number from redirect URL.\"",
-            "    }",
-            "} else {",
-            "    Write-Error \"Request failed with status code $($response.StatusCode)\"",
-            "}"
+        "script":[
+            ". bin\\utils.ps1",
+            "Get-RedirectedVersion -url \"https://dlsite.jp/NEST\" -regexPattern \"dlsitenest-v([\\d.]+)-win32-x64.exe\""
         ],
-        "regex": "(\\S+)"
+        "regex": "([\\d.]+)"
     },
     "autoupdate": {
         "architecture": {
