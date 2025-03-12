@@ -24,7 +24,7 @@
         "DownloadCache"
     ],
     "checkver": {
-        "script":[
+        "script": [
             ". bin\\utils.ps1",
             "Get-RedirectedVersion -url \"https://dlsite.jp/NEST\" -regexPattern \"dlsitenest-v([\\d.]+)-win32-x64.exe\""
         ],
