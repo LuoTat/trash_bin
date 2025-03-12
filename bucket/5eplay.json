@@ -9,7 +9,7 @@
             "hash": "7618b47c057147693ffa3cfc9c126b1b3aeb0c4ec04d5137cc6bfa045a0a6708"
         }
     },
-    "pre_install":[
+    "pre_install": [
         "Expand-7zipArchive \"$dir\\5EClient-$version.exe\" \"$dir\"",
         "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
         "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninstall 5EClient.exe\", \"$dir\\uninstallerIcon.ico\", \"$dir\\5EClient-$version.exe\" -Recurse"
