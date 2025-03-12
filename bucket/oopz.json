@@ -9,7 +9,7 @@
             "hash": "aab06411a756e8d214311c648c98d16bab79bdbc047542360bbb3fbe1457825d"
         }
     },
-    "pre_install":[
+    "pre_install": [
         "Expand-7zipArchive \"$dir\\oopz_setup_v$version.exe\" \"$dir\"",
         "Expand-7zipArchive \"$dir\\`$TEMP\\oopz_nsis\\app.7z\" \"$dir\"",
         "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$TEMP\", \"$dir\\uninstaller\", \"$dir\\oopz_setup_v$version.exe\" -Recurse"
