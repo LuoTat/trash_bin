@@ -10,9 +10,9 @@
         }
     },
     "pre_install": [
-        "Expand-7zipArchive \"$dir\\oopz_setup_v$version.exe\" \"$dir\"",
+        "Expand-7zipArchive \"$dir\\oopz_windows_v$version.exe\" \"$dir\"",
         "Expand-7zipArchive \"$dir\\`$TEMP\\oopz_nsis\\app.7z\" \"$dir\"",
-        "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$TEMP\", \"$dir\\uninstaller\", \"$dir\\oopz_setup_v$version.exe\" -Recurse"
+        "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$TEMP\", \"$dir\\uninstaller\", \"$dir\\oopz_windows_v$version.exe\" -Recurse"
     ],
     "shortcuts": [
         [
