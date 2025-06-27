@@ -1,12 +1,12 @@
 {
-    "version": "2.0.12",
+    "version": "2.0.13",
     "description": "Store (DLsite), viewer (DLsite Play), and community (DL Channel). Access them all without having to jump between services.",
     "homepage": "https://www.dlsite.com/home/guide/dlnest?locale=en_US",
     "license": "Proprietary",
     "architecture": {
         "64bit": {
-            "url": "https://www.dlsite.com/modpub/nest/releases/dlsitenest-v2.0.12-win32-x64.exe",
-            "hash": "09e668f4eb110d4a1602131c8b29fce8c13fc4113e521a0c8a3c11e38b136f2e"
+            "url": "https://www.dlsite.com/modpub/nest/releases/dlsitenest-v2.0.13-win32-x64.exe",
+            "hash": "b98548c9c891fed59944fdb4cfc8afe570dc265ec374e2e61402d643d7d226ff"
         }
     },
     "pre_install": [
