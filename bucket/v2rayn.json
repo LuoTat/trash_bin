@@ -7,7 +7,7 @@
         "64bit": {
             "url": "https://github.com/2dust/v2rayN/releases/download/7.13.8/v2rayN-windows-64-desktop.zip",
             "hash": "ba5215f9aa36306bab11fcbeeea7b1089d2d9871925016679d530dc7c975d277",
-            "extract_dir": "v2rayN-windows-64-desktop"
+            "extract_dir": "v2rayN-windows-64"
         }
     },
     "shortcuts": [
@@ -26,3 +26,4 @@
         }
     }
 }
+
