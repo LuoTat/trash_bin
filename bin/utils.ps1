@@ -4,9 +4,14 @@ function Get-RedirectedVersion {
         [string]$regexPattern   # 用于匹配版本号的正则表达式
     )
 
-    # 获取重定向 URL
-    $response = Invoke-WebRequest -Uri $url -Method Head
-    $redirectUrl = $response.BaseResponse.RequestMessage.RequestUri.AbsoluteUri
+     try {
+        # 获取重定向 URL
+        $response = Invoke-WebRequest -Uri $url -Method Head -ErrorAction Stop
+        $redirectUrl = $response.BaseResponse.RequestMessage.RequestUri.AbsoluteUri
+    }
+    catch {
+        throw "Failed to get redirect URL from $url. Error: $_"
+    }
 
     # 使用正则表达式匹配版本号
     if ($redirectUrl -match $regexPattern) {
