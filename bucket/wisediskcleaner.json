@@ -7,7 +7,7 @@
         "64bit": {
             "url": "https://downloads.wisecleaner.com/soft/WDCFree_11.2.7.847.zip",
             "hash": "3313445fb646d7ff659b7e5d172cf224e568429955be4b27eea046fb3255ff49",
-            "extract_dir": "WDCFree_11.2.7.847"
+            "extract_dir": "Wise Disk Cleaner"
         }
     },
     "shortcuts": [
@@ -25,7 +25,6 @@
         "architecture": {
             "64bit": {
                 "url": "https://downloads.wisecleaner.com/soft/WDCFree_$version.zip",
-                "extract_dir": "WDCFree_$version"
             }
         }
     }
