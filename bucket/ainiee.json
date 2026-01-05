@@ -3,13 +3,9 @@
     "description": "一款专注于Ai翻译的工具，可以用来一键自动翻译RPG SLG游戏，Epub Word TXT小说，Srt Vtt Lrc字幕等等。",
     "homepage": "https://github.com/NEKOparapa/AiNiee",
     "license": "GPL-3.0-only",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/NEKOparapa/AiNiee/releases/download/AiNiee7.0.9/AiNiee7.0.9.zip",
-            "hash": "cec8c4e88f6bab6b45db0861954a3b03abc0932a496015ea2b381840ace060d4",
-            "extract_dir": "dist"
-        }
-    },
+    "url": "https://github.com/NEKOparapa/AiNiee/releases/download/AiNiee7.0.9/AiNiee7.0.9.zip",
+    "hash": "cec8c4e88f6bab6b45db0861954a3b03abc0932a496015ea2b381840ace060d4",
+    "extract_dir": "dist",
     "shortcuts": [
         [
             "AiNiee/AiNiee.exe",
@@ -22,10 +18,6 @@
         "regex": "download/AiNiee([\\d.]+)/"
     },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/NEKOparapa/AiNiee/releases/download/AiNiee$version/AiNiee$version.zip"
-            }
-        }
+        "url": "https://github.com/NEKOparapa/AiNiee/releases/download/AiNiee$version/AiNiee$version.zip"
     }
 }
