@@ -3,17 +3,13 @@
     "description": "Free Disk Cleanup and Defragment Tool.",
     "homepage": "https://www.wisecleaner.com",
     "license": "Proprietary",
-    "architecture": {
-        "64bit": {
-            "url": "https://downloads.wisecleaner.com/soft/WDCFree_11.3.1.851.zip",
-            "hash": "acdb85aaf85e297d9853e7d337bcdc4858d9673557d7c95ccc3038a242c6b078",
-            "extract_dir": "WDCFree_11.3.1.851"
-        }
-    },
+    "url": "https://downloads.wisecleaner.com/soft/WDCFree_11.3.1.851.zip",
+    "hash": "acdb85aaf85e297d9853e7d337bcdc4858d9673557d7c95ccc3038a242c6b078",
+    "extract_dir": "WDCFree_11.3.1.851\\WDCFree_11.3.1.851(x64)",
     "shortcuts": [
         [
             "WiseDiskCleaner.exe",
-            "Wise Disk Cleaner"
+            "WiseDiskCleaner"
         ]
     ],
     "persist": "config.ini",
@@ -22,11 +18,7 @@
         "regex": "WDCFree_([\\d.]+).zip"
     },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://downloads.wisecleaner.com/soft/WDCFree_$version.zip",
-                "extract_dir": "WDCFree_$version"
-            }
-        }
+        "url": "https://downloads.wisecleaner.com/soft/WDCFree_$version.zip",
+        "extract_dir": "WDCFree_$version\\WDCFree_$version(x64)"
     }
 }
