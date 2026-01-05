@@ -1,40 +1,32 @@
-// {
-//     "version": "2.0.13",
-//     "description": "Store (DLsite), viewer (DLsite Play), and community (DL Channel). Access them all without having to jump between services.",
-//     "homepage": "https://www.dlsite.com/home/guide/dlnest?locale=en_US",
-//     "license": "Proprietary",
-//     "architecture": {
-//         "64bit": {
-//             "url": "https://www.dlsite.com/modpub/nest/releases/dlsitenest-v2.0.13-win32-x64.exe",
-//             "hash": "b98548c9c891fed59944fdb4cfc8afe570dc265ec374e2e61402d643d7d226ff"
-//         }
-//     },
-//     "pre_install": [
-//         "Expand-7zipArchive \"$dir\\dlsitenest-v$version-win32-x64.exe\" \"$dir\"",
-//         "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\dlsitenest-v$version-win32-x64.exe\" -Recurse"
-//     ],
-//     "shortcuts": [
-//         [
-//             "DLsiteNest.exe",
-//             "DLsiteNest"
-//         ]
-//     ],
-//     "persist": [
-//         "Library",
-//         "DownloadCache"
-//     ],
-//     "checkver": {
-//         "script": [
-//             ". bin\\utils.ps1",
-//             "Get-RedirectedVersion -url \"https://dlsite.jp/NEST\" -regexPattern \"dlsitenest-v([\\d.]+)-win32-x64.exe\""
-//         ],
-//         "regex": "([\\d.]+)"
-//     },
-//     "autoupdate": {
-//         "architecture": {
-//             "64bit": {
-//                 "url": "https://www.dlsite.com/modpub/nest/releases/dlsitenest-v$version-win32-x64.exe"
-//             }
-//         }
-//     }
-// }
+{
+    "version": "2.0.13",
+    "description": "Store (DLsite), viewer (DLsite Play), and community (DL Channel). Access them all without having to jump between services.",
+    "homepage": "https://www.dlsite.com/home/guide/dlnest?locale=en_US",
+    "license": "Proprietary",
+    "url": "https://www.dlsite.com/modpub/nest/releases/dlsitenest-v2.0.13-win32-x64.exe",
+    "hash": "b98548c9c891fed59944fdb4cfc8afe570dc265ec374e2e61402d643d7d226ff",
+    "pre_install": [
+        "Expand-7zipArchive \"$dir\\dlsitenest-v$version-win32-x64.exe\" \"$dir\"",
+        "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\dlsitenest-v$version-win32-x64.exe\" -Recurse"
+    ],
+    "shortcuts": [
+        [
+            "DLsiteNest.exe",
+            "DLsiteNest"
+        ]
+    ],
+    "persist": [
+        "Library",
+        "DownloadCache"
+    ],
+    "checkver": {
+        "script": [
+            ". bin\\utils.ps1",
+            "Get-RedirectedUrl -url \"https://dlsite.jp/NEST\""
+        ],
+        "regex": "dlsitenest-v([\\d.]+)-win32-x64.exe"
+    },
+    "autoupdate": {
+        "url": "https://www.dlsite.com/modpub/nest/releases/dlsitenest-v$version-win32-x64.exe"
+    }
+}
