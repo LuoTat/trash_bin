@@ -3,12 +3,8 @@
     "description": "Oopz是一款集语音开黑、社区交友、AI聊天于一体的游戏语音软件",
     "homepage": "https://oopz.cn",
     "license": "Proprietary",
-    "architecture": {
-        "64bit": {
-            "url": "https://downloadcdn.oopz.cn/release/130/oopz_setup_v1.3.0.exe",
-            "hash": "e91dd1b57077f3436f1739bc4294cc0339e41fbe7f8c70021ca1cf730c75ee3c"
-        }
-    },
+    "url": "https://downloadcdn.oopz.cn/release/130/oopz_setup_v1.3.0.exe",
+    "hash": "e91dd1b57077f3436f1739bc4294cc0339e41fbe7f8c70021ca1cf730c75ee3c",
     "pre_install": [
         "Expand-7zipArchive \"$dir\\oopz_setup_v$version.exe\" \"$dir\"",
         "Expand-7zipArchive \"$dir\\`$TEMP\\oopz_nsis\\app.7z\" \"$dir\"",
@@ -23,15 +19,11 @@
     "checkver": {
         "script": [
             ". bin\\utils.ps1",
-            "Get-RedirectedVersion -url \"https://www.oopz.cn/download/xx\" -regexPattern \"oopz_setup_v([\\d.]+).exe\""
+            "Get-RedirectedUrl -url \"https://www.oopz.cn/download/xx\""
         ],
-        "regex": "([\\d.]+)"
+        "regex": "oopz_setup_v([\\d.]+).exe"
     },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://downloadcdn.oopz.cn/release/$majorVersion$minorVersion$patchVersion/oopz_setup_v$version.exe"
-            }
-        }
+        "url": "https://downloadcdn.oopz.cn/release/$majorVersion$minorVersion$patchVersion/oopz_setup_v$version.exe"
     }
 }
