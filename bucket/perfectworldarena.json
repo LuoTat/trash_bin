@@ -1,10 +1,10 @@
 {
-    "version": "1.0.26012213",
+    "version": "1.0.26012311",
     "description": "完美世界竞技平台-专业赛事对战平台",
     "homepage": "https://pvp.wanmei.com/",
     "license": "Proprietary",
-    "url": "https://client.wmpvp.com/download/perfectworldarena_win32_v1.0.26012213.zip",
-    "hash": "c7dad4bd97dcd0a53b8539fc823d9e7f3b7a3e60fbb7ec5f284121812728a250",
+    "url": "https://client.wmpvp.com/download/perfectworldarena_win32_v1.0.26012311.zip",
+    "hash": "5aefa08750ffa63698f2101ff214f9b9348c45408f61c126a0432a1a538ca72c",
     "shortcuts": [
         [
             "完美世界竞技平台.exe",
