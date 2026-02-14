@@ -1,10 +1,10 @@
 {
-    "version": "2.0.18",
+    "version": "2.0.19",
     "description": "Store (DLsite), viewer (DLsite Play), and community (DL Channel). Access them all without having to jump between services.",
     "homepage": "https://www.dlsite.com/home/guide/dlnest?locale=en_US",
     "license": "Proprietary",
-    "url": "https://www.dlsite.com/modpub/nest/releases/dlsitenest-v2.0.18-win32-x64.exe",
-    "hash": "07441eff83c54ef0fd3f9c52558c611ef13824fca43809211385b5d20c99193c",
+    "url": "https://www.dlsite.com/modpub/nest/releases/dlsitenest-v2.0.19-win32-x64.exe",
+    "hash": "7bdc27779352bed7403a684033d02537e86111fcc925eb6bd20ec5470f322aa8",
     "pre_install": [
         "Expand-7zipArchive \"$dir\\dlsitenest-v$version-win32-x64.exe\" \"$dir\"",
         "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\dlsitenest-v$version-win32-x64.exe\" -Recurse"
