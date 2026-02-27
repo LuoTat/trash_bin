@@ -1,10 +1,10 @@
 {
-    "version": "7.18.0",
+    "version": "7.19.0",
     "description": "A V2Ray client for Windows, support Xray & v2fly core.",
     "homepage": "https://github.com/2dust/v2rayN",
     "license": "GPL-3.0-only",
-    "url": "https://github.com/2dust/v2rayN/releases/download/7.18.0/v2rayN-windows-64-desktop.zip",
-    "hash": "355020da05844aecde99e2ec12b13587000996cf8d5b71c7d2a2c5715c4ef11b",
+    "url": "https://github.com/2dust/v2rayN/releases/download/7.19.0/v2rayN-windows-64-desktop.zip",
+    "hash": "0663ccbc47bbb87076bdae5f7bad71dcab68a29bf1712110a2759ae944df65f8",
     "extract_dir": "v2rayN-windows-64",
     "shortcuts": [
         [
