@@ -1,10 +1,10 @@
 {
-    "version": "1.4.5",
+    "version": "1.4.5.1",
     "description": "Oopz是一款集语音开黑、社区交友、AI聊天于一体的游戏语音软件",
     "homepage": "https://oopz.cn",
     "license": "Proprietary",
-    "url": "https://downloadcdn.oopz.cn/release/145/oopz_setup_v1.4.5.exe",
-    "hash": "69e648d9e795ccf2c297936b06cf29cfdf73e9adcbb868b4afcd4055b05a6610",
+    "url": "https://downloadcdn.oopz.cn/release/145/oopz_setup_v1.4.5.1.exe",
+    "hash": "1715ebd100bc0cb269f39a4732ad68169660db1fc796ab1f98ba492cb3eab869",
     "pre_install": [
         "Expand-7zipArchive \"$dir\\oopz_setup_v$version.exe\" \"$dir\"",
         "Expand-7zipArchive \"$dir\\`$TEMP\\oopz_nsis\\app.7z\" \"$dir\"",
